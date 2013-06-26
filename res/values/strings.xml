@@ -4,8 +4,12 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="app_name">TodoList</string>
-    <string name="add_task">Tâche à faire</string>
+    <string name="menu_add_task">Ajouter</string>
+    <string name="add_task">Ajouter une tâche</string>
+    <string name="todo_task">Tâche à faire</string>
     <string name="add">Ajouter</string>
+    <string name="cancel">Annuler</string>
     <string name="url_server">http://kevinya-todolist.herokuapp.com</string>
+    <string name="menu_refresh">Rafraichir</string>
     
 </resources>

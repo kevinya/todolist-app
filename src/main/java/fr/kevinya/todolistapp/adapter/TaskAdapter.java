@@ -59,8 +59,10 @@ public class TaskAdapter extends BaseAdapter {
 		
 
 		Task task = (Task) getItem(position);
-		if (task.getStatus() == 1) {	
+		if (task.getStatus() == 1) {
 			checkbox.setChecked(true);
+		} else {
+			checkbox.setChecked(false);
 		}
 		textview.setText(task.getName());
 		
