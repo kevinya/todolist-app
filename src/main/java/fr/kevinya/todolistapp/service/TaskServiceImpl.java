@@ -61,10 +61,9 @@ public class TaskServiceImpl extends Observable implements TaskServiceLocal {
 		return newTask;
 	}
 
-	public void delete(Task task) {
-		taskDao.open();
-		taskDao.delete(task);
-		taskDao.close();
+	public Task delete(Task task) {
+		task.setStatus(2);
+		return update(task);
 	}
 
 	public List<Task> findAll() {

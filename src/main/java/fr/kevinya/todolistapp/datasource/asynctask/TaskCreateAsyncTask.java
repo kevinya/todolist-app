@@ -31,8 +31,8 @@ public class TaskCreateAsyncTask extends AsyncTask<String, Void, String> {
 		JSONObject json = new JSONObject();
 		try {
 			json.put("name", task.getName());
-			json.put("status", 0);
-			json.put("version", 1);
+			json.put("status", task.getStatus());
+			json.put("version", task.getVersion());
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}

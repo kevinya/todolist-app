@@ -167,6 +167,15 @@ public class TaskDataSource implements OnCreateCompleted, OnDeleteCompleted, OnR
 
 	@Override
 	public void onDeleteCompleted(String result, Integer id) {
+		JSONObject json = null;
+		try {
+			json = new JSONObject(result);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		Task backendTask = new Task(json);
+		backendTask.setId(id);
+		mergeById(backendTask);
 	}
 	
 }
