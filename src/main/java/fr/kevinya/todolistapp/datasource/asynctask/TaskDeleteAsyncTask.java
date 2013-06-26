@@ -15,7 +15,6 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
 import android.os.AsyncTask;
-import android.util.Log;
 import fr.kevinya.todolistapp.datasource.callback.OnDeleteCompleted;
 import fr.kevinya.todolistapp.entity.Task;
 
@@ -56,7 +55,6 @@ public class TaskDeleteAsyncTask extends AsyncTask<String, Void, String> {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Log.i("DeleteAsyncTask", "response: " + responseString);
 		return responseString;
 	}
 

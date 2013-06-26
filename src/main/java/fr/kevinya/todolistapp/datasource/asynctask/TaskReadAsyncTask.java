@@ -8,7 +8,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import android.os.AsyncTask;
-import android.util.Log;
 import fr.kevinya.todolistapp.datasource.callback.OnReadCompleted;
 
 public class TaskReadAsyncTask extends AsyncTask<String, Void, String> {
@@ -51,7 +50,6 @@ public class TaskReadAsyncTask extends AsyncTask<String, Void, String> {
 		} finally {
 			urlConnection.disconnect();
 		}
-		Log.i("ReadAsync", stringBuilder.toString());
 		return stringBuilder.toString();
 	}
 

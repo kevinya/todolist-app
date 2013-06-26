@@ -13,7 +13,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.os.AsyncTask;
-import android.util.Log;
 import fr.kevinya.todolistapp.datasource.callback.OnCreateCompleted;
 import fr.kevinya.todolistapp.entity.Task;
 
@@ -65,7 +64,6 @@ public class TaskCreateAsyncTask extends AsyncTask<String, Void, String> {
 		} finally {
 			urlConnection.disconnect();
 		}
-		Log.i("CreateAsync", stringBuilder.toString());
 		return stringBuilder.toString();
 	}
 

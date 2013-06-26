@@ -65,27 +65,31 @@ public class TaskDataSource implements OnCreateCompleted, OnDeleteCompleted, OnR
 	}
 	
 	public void onCreateCompleted(String result, Integer id) {
-		JSONObject json = null;
-		try {
-			json = new JSONObject(result);
-		} catch (JSONException e) {
-			e.printStackTrace();
+		if (result != null && !result.equals("")) { 
+			JSONObject json = null;
+			try {
+				json = new JSONObject(result);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			Task backendTask = new Task(json);
+			backendTask.setId(id);
+			mergeById(backendTask);
 		}
-		Task backendTask = new Task(json);
-		backendTask.setId(id);
-		mergeById(backendTask);
 	}
 
 	public void onUpdateCompleted(String result, Integer id) {
-		JSONObject json = null;
-		try {
-			json = new JSONObject(result);
-		} catch (JSONException e) {
-			e.printStackTrace();
+		if (result != null && !result.equals("")) { 
+			JSONObject json = null;
+			try {
+				json = new JSONObject(result);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			Task backendTask = new Task(json);
+			backendTask.setId(id);
+			mergeById(backendTask);
 		}
-		Task backendTask = new Task(json);
-		backendTask.setId(id);
-		mergeById(backendTask);
 	}
 
 	public void onReadCompleted(String result, Integer id) {
@@ -167,15 +171,17 @@ public class TaskDataSource implements OnCreateCompleted, OnDeleteCompleted, OnR
 
 	@Override
 	public void onDeleteCompleted(String result, Integer id) {
-		JSONObject json = null;
-		try {
-			json = new JSONObject(result);
-		} catch (JSONException e) {
-			e.printStackTrace();
+		if (result != null && !result.equals("")) { 
+			JSONObject json = null;
+			try {
+				json = new JSONObject(result);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			Task backendTask = new Task(json);
+			backendTask.setId(id);
+			mergeById(backendTask);
 		}
-		Task backendTask = new Task(json);
-		backendTask.setId(id);
-		mergeById(backendTask);
 	}
 	
 }

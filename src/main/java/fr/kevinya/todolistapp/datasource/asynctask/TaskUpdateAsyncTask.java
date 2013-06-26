@@ -9,7 +9,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 import android.os.AsyncTask;
-import android.util.Log;
 import fr.kevinya.todolistapp.datasource.callback.OnUpdateCompleted;
 import fr.kevinya.todolistapp.entity.Task;
 
@@ -47,7 +46,6 @@ public class TaskUpdateAsyncTask extends AsyncTask<String, Void, String> {
 		} finally {
 			urlConnection.disconnect();
 		}
-		Log.i("UpdateAsync", stringBuilder.toString());
 		return stringBuilder.toString();
 	}
 
